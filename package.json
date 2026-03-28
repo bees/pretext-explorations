@@ -7,7 +7,8 @@
     "dev": "vp dev",
     "build": "tsc && vp build",
     "preview": "vp preview",
-    "prepare": "vp config"
+    "prepare": "vp config",
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
     "@chenglou/pretext": "^0.0.2"
@@ -15,7 +16,8 @@
   "devDependencies": {
     "typescript": "~5.9.3",
     "vite": "npm:@voidzero-dev/vite-plus-core@latest",
-    "vite-plus": "latest"
+    "vite-plus": "latest",
+    "wrangler": "^4.78.0"
   },
   "packageManager": "pnpm@10.33.0",
   "pnpm": {
