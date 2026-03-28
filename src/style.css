@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --art-height: 448px;
+  --brand-ink: #04070e;
+  --brand-ink-soft: #04070e;
+  --brand-primary: #7fc8ff;
+  --brand-tint-1: #99d3ff;
+  --brand-tint-2: #b2deff;
+  --brand-tint-3: #cce9ff;
+}
+
+html,
+body {
+  background:
+    radial-gradient(circle at top, rgb(127 200 255 / 0.16), transparent 34%),
+    linear-gradient(180deg, var(--brand-ink) 0%, var(--brand-ink-soft) 100%);
+  color: var(--brand-tint-3);
+  min-height: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 20px 60px;
+}
+
+.comparison {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(468px, calc(100vw - 40px));
+}
+
+.art-box {
+  width: 100%;
+  height: calc(var(--art-height) + 28px);
+  padding: 14px;
+  overflow: hidden;
+  box-shadow:
+    inset 0 0 30px rgb(4 7 14 / 0.42),
+    0 10px 30px rgb(4 7 14 / 0.46);
+}
+
+#prop-box {
+  height: 80vh;
+  width: 80vw;
+}
+
+#art-stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+}
+
+#text-layer,
+#source-canvas {
+  position: absolute;
+  inset: 0;
+}
+
+#text-layer {
+  z-index: 1;
+}
+
+.art-row {
+  display: block;
+  width: 100%;
+  white-space: pre;
+  text-align: center;
+  font-family: Georgia, Palatino, "Times New Roman", serif;
+}
+
+.a1 {
+  color: rgb(204 233 255 / 0.1);
+}
+.a2 {
+  color: rgb(204 233 255 / 0.2);
+}
+.a3 {
+  color: rgb(204 233 255 / 0.32);
+}
+.a4 {
+  color: rgb(178 222 255 / 0.42);
+}
+.a5 {
+  color: rgb(178 222 255 / 0.54);
+}
+.a6 {
+  color: rgb(153 211 255 / 0.64);
+}
+.a7 {
+  color: rgb(153 211 255 / 0.76);
+}
+.a8 {
+  color: rgb(127 200 255 / 0.84);
+}
+.a9 {
+  color: rgb(127 200 255 / 0.92);
+}
+.a10 {
+  color: var(--brand-primary);
+}
+
+.credit {
+	position: fixed;
+	bottom: 12px;
+	right: 16px;
+	z-index: 20;
+	font: 400 11px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: rgba(255,255,255,0.28);
+	text-decoration: none;
+}
